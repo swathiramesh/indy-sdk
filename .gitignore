@@ -12,3 +12,4 @@ Podfile.lock
 /wrappers/python/venv/
 
 /doc/getting-started/.ipynb_checkpoints/
+/doc/getting-started/jupyter-guide/.ipynb_checkpoints/
