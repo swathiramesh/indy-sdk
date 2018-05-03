@@ -14,6 +14,8 @@ The command above will create `getting-started` (the jupyter notebook) and `indy
 The validators run by default on IP `10.0.0.2`, this can be changed by changing `pool_ip` in the `docker-compose` file.  
 To get Jupyter click on the link in output (it must have following format: http://0.0.0.0:8888/?token= )
 
+**Note:** If you have previously started a test pool network, you may get an error saying there is an overlapping pool. If that's the case, just run `service docker restart` to refresh the networks.
+
 ### Stop
 
 `docker-compose down`
