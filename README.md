@@ -49,7 +49,7 @@ Please refer to our [release workflow](doc/release-workflow.md) for more details
 ### Ubuntu based distributions (Ubuntu 16.04)
 It is recommended to install the SDK packages with APT:
 
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 68DB5E88
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 68DB5E88
     sudo add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial {release channel}"
     sudo apt-get update
     sudo apt-get install -y libindy
@@ -114,6 +114,11 @@ After successfully compiling `libindy`, you will need to add the path containing
 * [RHEL based distributions (Amazon Linux 2017.03)](doc/rhel-build.md)
 * [Windows](doc/windows-build.md)
 * [MacOS](doc/mac-build.md)
+
+**Note:**
+By default `cargo build` produce debug artifacts with a large amount of run-time checks.
+It's good for development, but this build can be in 100+ times slower for some math calculation.
+If you would like to analyse CPU performance of libindy for your use case, you have to use release artifacts (`cargo build --release`). 
 
 ## How to start local nodes pool with docker
 To test the SDK codebase with a virtual Indy node network, you can start a pool of local nodes using docker:
